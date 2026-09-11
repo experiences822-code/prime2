@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090a08">
+<title>ECO.EXPERIENCES — Laboratorio Creativo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Satisfy&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script defer src="app.js"></script>
+
+<style>
+.footer-contact{display:flex;flex-direction:column;align-items:center;gap:8px;margin:18px auto 8px;text-align:center}
+.footer-contact>small{letter-spacing:.18em;font-size:9px;opacity:.7}
+.footer-phone{font-size:clamp(18px,2vw,26px);letter-spacing:.08em;color:inherit;text-decoration:none;font-weight:600}
+.footer-phone:hover{text-decoration:underline}
+.footer-whatsapp{display:inline-flex;align-items:center;justify-content:center;padding:10px 18px;border:1px solid currentColor;color:inherit;text-decoration:none;font-size:10px;letter-spacing:.18em;transition:.25s ease}
+.footer-whatsapp:hover{background:#d6ee63;color:#111;border-color:#d6ee63}
+
+.contact-cta{position:relative;overflow:hidden;margin:0;padding:clamp(70px,10vw,130px) 6vw;background:#0b0d0a;border-top:1px solid rgba(214,238,99,.18);border-bottom:1px solid rgba(214,238,99,.18);text-align:center}
+.contact-cta:before{content:"";position:absolute;inset:18% 15%;border:1px solid rgba(214,238,99,.10);transform:rotate(-1deg);pointer-events:none}
+.contact-cta .eyebrow{position:relative;margin-bottom:14px}
+.contact-cta h2{position:relative;margin:0 auto 16px;max-width:900px;font-size:clamp(42px,7vw,92px);line-height:.95}
+.contact-cta h2 em{color:#d6ee63}
+.contact-cta p{position:relative;max-width:650px;margin:0 auto 30px;opacity:.75;line-height:1.7}
+.contact-actions{position:relative;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.contact-actions a{display:inline-flex;align-items:center;justify-content:center;min-width:190px;padding:14px 22px;text-decoration:none;font-size:10px;letter-spacing:.18em;border:1px solid rgba(255,255,255,.28);transition:.25s ease}
+.contact-actions .contact-main{background:#eef0df;color:#111;border-color:#eef0df}
+.contact-actions .contact-main:hover{background:#d6ee63;border-color:#d6ee63}
+.contact-actions .contact-secondary{color:#f3f3ec}
+.contact-actions .contact-secondary:hover{border-color:#d6ee63;color:#d6ee63}
+@media(max-width:640px){.contact-cta{padding:70px 22px}.contact-actions{flex-direction:column;align-items:stretch}.contact-actions a{width:100%;min-width:0}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <a class="mini-brand" href="#inicio">eco<span>.</span><small>experiences</small></a>
+  <nav>
+    <a href="#nosotros">Nosotros</a><a href="#proyectos">Proyectos</a><a href="#disciplinas">Disciplinas</a><a href="#eco-tronic">ECO.TRONIC</a><a href="#contacto">Contacto</a>
+  </nav>
+  <button class="nav-cta" data-open-auth>Entrar al laboratorio ↗</button>
+</header>
+
+<main>
+<section id="inicio" class="hero">
+  <img src="images/banner.png" alt="Laboratorio creativo de ECO.EXPERIENCES">
+  <div class="shade"></div>
+  <div class="hero-left">REUTILIZAR<br>REDISEÑAR<br>REINVENTAR<br>REVOLUCIONAR</div>
+  <div class="hero-right">DESDE UN DISPOSITIVO<br>PARA TU BICICLETA<br><b>HASTA LA DECORACIÓN</b><br>DE TU RESTAURANTE<br>O CUALQUIER IDEA<br><b>QUE PUEDAS IMAGINAR.</b></div>
+  <div class="hero-center">
+    <div class="sign"><strong>eco<span>.</span>-<i>experiences</i></strong><small>LABORATORIO CREATIVO</small></div>
+    <p class="eyebrow">DISEÑO · ARTE · OBJETOS · ESPACIOS · EXPERIENCIAS</p>
+    <h1>Ideas que <em>toman forma.</em></h1>
+    <p>Un laboratorio creativo que conecta talento, diseño, materiales y tecnología para transformar ideas en experiencias.</p>
+    <button class="btn" data-open-auth>ENTRAR AL LABORATORIO ↗</button>
+  </div>
+  <div class="hero-bottom">SOSTENIBILIDAD　•　INNOVACIÓN　•　DISEÑO</div>
+</section>
+
+<section id="nosotros" class="section intro">
+  <span class="label">01 / EL LABORATORIO</span>
+  <div class="intro-grid">
+    <div><p class="eyebrow green">MÁS QUE UN TALLER</p><h2>Un laboratorio<br><em>de ideas.</em></h2></div>
+    <div class="copy"><p>Somos un laboratorio creativo que conecta <b>talento, diseño, materiales y tecnología</b> para transformar necesidades, ideas y sueños en proyectos reales.</p><p>No partimos de una solución prefabricada. <b>Partimos de una idea.</b> Escuchamos, exploramos, combinamos y encontramos el camino adecuado para cada proyecto.</p></div>
+    <div class="hand">La creatividad<br>también puede<br>cambiar el mundo.</div>
+  </div>
+</section>
+
+<section id="disciplinas" class="section dark-border">
+  <div class="heading"><div><p class="eyebrow green">02 / LO QUE CONECTAMOS</p><h2>Cuatro fuerzas.<br><em>Una experiencia.</em></h2></div><p>Seleccionamos el talento adecuado, exploramos materiales, desarrollamos conceptos e integramos herramientas digitales e IA de manera inteligente.</p></div>
+  <div class="pillars">
+    <article><small>01</small><h3>TALENTO</h3><p>Encontramos y seleccionamos personas con la capacidad adecuada para cada reto.</p></article>
+    <article><small>02</small><h3>DISEÑO</h3><p>Convertimos necesidades e ideas en conceptos, propuestas y soluciones.</p></article>
+    <article><small>03</small><h3>MATERIALES</h3><p>Elegimos materiales según función, estética, resistencia y resultado.</p></article>
+    <article><small>04</small><h3>TECNOLOGÍA</h3><p>Usamos herramientas digitales e IA para explorar, diseñar y optimizar.</p></article>
+  </div>
+  <div class="quote">“La tecnología acelera el proceso. El criterio creativo decide el resultado.”</div>
+</section>
+
+<section id="proyectos" class="section projects">
+  <div class="heading"><div><p class="eyebrow green">03 / PROYECTOS DESTACADOS</p><h2>Ideas que <em>tomaron forma.</em></h2></div><p>DISEÑO · FABRICACIÓN · EXPERIENCIA</p></div>
+  <div class="project-grid">
+    <article><div class="project-img"><img src="images/bolo.png" alt="Proyecto Bolo Club Social"></div><div class="meta"><b>01</b><h3>BOLO CLUB SOCIAL</h3><p>Diseño · Fabricación · Identidad</p></div></article>
+    <article><div class="project-img switch"><img src="images/evento.png" alt="Experiencia inmersiva"><img src="images/demogorgon.png" alt="Instalación escultórica"></div><div class="meta"><b>02</b><h3>EXPERIENCIAS INMERSIVAS</h3><p>Diseño · Materiales · Transformación</p></div></article>
+    <article><div class="project-img"><img src="images/minotauro.png" alt="Proyecto El Minotauro"></div><div class="meta"><b>03</b><h3>EL MINOTAURO</h3><p>Diseño · Identidad · Espacios</p></div></article>
+  </div>
+</section>
+
+<section class="feature">
+  <div class="feature-photo"><img src="images/bolo.png" alt="Diseño industrial y fabricación"></div>
+  <div class="feature-text"><p class="eyebrow green">DISEÑO INDUSTRIAL</p><h2>Materia que<br><em>se convierte.</em></h2><p>Objetos, mobiliario, señalética y piezas especiales. Diseñamos pensando en cómo se construyen, cómo funcionan y cómo permanecen.</p><div class="tags">MOBILIARIO · OBJETOS · LETREROS · FABRICACIÓN</div></div>
+</section>
+
+<section class="feature reverse">
+  <div class="feature-text"><p class="eyebrow green">DISEÑO GRÁFICO & DIGITAL</p><h2>La idea también<br><em>se ve.</em></h2><p>Identidad visual, piezas gráficas, renders y exploraciones visuales para llevar una idea desde el concepto hasta una presentación que pueda sentirse.</p><div class="tags">IDENTIDAD · GRÁFICA · RENDERS · CONCEPTOS</div></div>
+  <div class="graphic"><div><strong>eco<span>.</span></strong><b>EXPERIENCES</b><small>LABORATORIO CREATIVO</small><i>IDEAS → FORMA → EXPERIENCIA</i></div></div>
+</section>
+
+<section class="section connection">
+  <span class="label">04 / TODO CONECTA</span>
+  <div class="heading"><div><p class="eyebrow green">UN LABORATORIO</p><h2>Múltiples disciplinas.<br><em>Infinitas posibilidades.</em></h2></div><p>La experiencia final nace cuando las piezas correctas encuentran el momento correcto.</p></div>
+  <div class="orbit"><div class="center">eco<span>.</span><small>EXPERIENCES</small></div><div class="node a">ECO.LAB<small>IDEAS</small></div><div class="node b">ECO.RED<small>TALENTO</small></div><div class="node c">ECO.TEAMS<small>PROYECTOS</small></div><div class="node d">ECO.MERCH<small>EDICIONES</small></div></div>
+</section>
+
+<section id="eco-tronic" class="tronic-section">
+  <div class="tronic-bg"></div>
+  <div class="tronic-copy">
+    <p class="eyebrow green">05 / ECO.TRONIC</p>
+    <h2>La inteligencia<br><em>detrás del laboratorio.</em></h2>
+    <p>ECO.TRONIC acompaña al cliente desde la primera idea. Interpreta lo que necesita, organiza la información y construye la comanda que entra a ECO.LAB.</p>
+    <div class="tronic-flow"><span>IDEA</span><i>→</i><span>ESTILO</span><i>→</i><span>MATERIA</span><i>→</i><span>COMANDA</span></div>
+    <button class="btn" data-open-auth>ENTRAR Y HABLAR CON ECO.TRONIC ↗</button>
+  </div>
+  <div class="tronic-console">
+    <div class="console-top"><span class="status-dot"></span> ECO.TRONIC <small>LAB ONLINE</small></div>
+    <div class="console-message">Hola. No necesitas tenerlo todo claro.<br><b>Cuéntame qué quieres crear.</b></div>
+    <div class="console-options"><span>Quiero diseñar algo</span><span>Tengo una idea</span><span>Necesito transformar un espacio</span></div>
+  </div>
+</section>
+
+<section id="eco-lab" class="lab">
+  <div class="lab-bg"></div>
+  <div class="lab-text"><p class="eyebrow green">06 / ECO.LAB</p><h2>Donde comienza<br><em>el proyecto.</em></h2><p>No necesitas saber exactamente qué necesitas. Cuéntanos qué quieres hacer y buscamos contigo el camino.</p><div class="flow">IDEA　→　ANÁLISIS　→　PROPUESTA　→　REALIDAD</div><button class="btn" data-open-auth>ENTRAR A ECO.LAB ↗</button></div>
+  <aside><b>COMANDA</b><small>Tu proyecto queda registrado<br>y comienza su recorrido.</small></aside>
+</section>
+
+<section class="section future">
+  <div class="heading"><div><p class="eyebrow green">07 / LO QUE VIENE</p><h2>Un laboratorio<br><em>que crece.</em></h2></div><p>Construimos progresivamente una red donde ideas, talento, equipos, materiales y tecnología puedan encontrarse.</p></div>
+  <div class="future-grid"><article><small>01</small><h3>ECO.LAB</h3><p>Tu idea entra aquí.</p><b>ACTIVO</b></article><article class="locked"><small>02</small><h3>ECO.RED</h3><p>La red de talento.</p><b>PRÓXIMAMENTE · 🔒</b></article><article class="locked"><small>03</small><h3>ECO.TEAMS</h3><p>Equipos para cada proyecto.</p><b>PRÓXIMAMENTE · 🔒</b></article><article><small>04</small><h3>ECO.MERCH</h3><p>Objetos, ediciones y colaboraciones.</p><b>EN DESARROLLO</b></article></div>
+</section>
+
+<section id="decision" class="decision"><p class="eyebrow green">AHORA TE TOCA A TI</p><h2>¿Qué quieres <em>hacer?</em></h2><p>Una idea, un proyecto, una colaboración o algo que todavía no sabes cómo explicar.</p><div class="choices"><button data-open-auth><small>QUIERO CREAR</small><strong>ENTRAR A ECO.LAB →</strong><span>Habla con ECO.TRONIC y crea tu comanda.</span></button><div class="locked"><small>QUIERO CONECTARME</small><strong>ECO.RED · PRÓXIMAMENTE 🔒</strong><span>El talento pronto encontrará su lugar.</span></div></div></section>
+
+
+<section class="contact-cta" id="contacto">
+  <p class="eyebrow green">¿TIENES UNA IDEA?</p>
+  <h2>Hablemos y<br><em>hagámosla realidad.</em></h2>
+  <p>No necesitas tener todo resuelto. Cuéntanos qué quieres crear y encontramos contigo el camino.</p>
+  <div class="contact-actions">
+    <a class="contact-main" href="https://wa.me/573219678860" target="_blank" rel="noopener">HABLAR POR WHATSAPP ↗</a>
+    <a class="contact-secondary" href="tel:+573219678860">LLAMAR AL +57 321 967 8860</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div>eco<span>.</span><small>experiences</small></div>
+  <p>“Diseñamos hoy,<br><em>transformamos mañana.</em>”</p>
+  <div class="footer-contact">
+    <small>HABLEMOS DE TU IDEA</small>
+    <a href="tel:+573219678860" class="footer-phone">+57 321 967 8860</a>
+    <a href="https://wa.me/573219678860" target="_blank" rel="noopener" class="footer-whatsapp">WHATSAPP ↗</a>
+  </div>
+  <small>IDEAS QUE EVOLUCIONAN　◇</small>
+</footer>
+
+<div id="auth-modal" class="modal" aria-hidden="true">
+  <div class="modal-backdrop" data-close-auth></div>
+  <div class="auth-card" role="dialog" aria-modal="true" aria-labelledby="auth-title">
+    <button class="modal-close" data-close-auth aria-label="Cerrar">×</button>
+    <div class="auth-brand">eco<span>.</span><small>experiences</small></div>
+    <p class="eyebrow green">ENTRADA AL LABORATORIO</p>
+    <h2 id="auth-title">Antes de crear,<br><em>conectemos.</em></h2>
+    <p class="auth-intro">Tu registro permite guardar tus proyectos, comandas y avances dentro de ECO.LAB.</p>
+    <div class="auth-tabs"><button class="active" data-auth-tab="login">INICIAR SESIÓN</button><button data-auth-tab="register">CREAR CUENTA</button></div>
+    <form id="login-form" class="auth-form">
+      <label>Email<input type="email" name="email" required autocomplete="email"></label>
+      <label>Contraseña<input type="password" name="password" required autocomplete="current-password"></label>
+      <button class="btn full" type="submit">ENTRAR ↗</button>
+    </form>
+    <form id="register-form" class="auth-form hidden">
+      <div class="form-grid"><label>Nombre<input type="text" name="nombre" required autocomplete="name"></label><label>Teléfono<input type="tel" name="telefono" autocomplete="tel"></label></div>
+      <label>Email<input type="email" name="email" required autocomplete="email"></label>
+      <div class="form-grid"><label>Ciudad<input type="text" name="ciudad" autocomplete="address-level2"></label><label>Empresa <span>(opcional)</span><input type="text" name="empresa"></label></div>
+      <label>Contraseña<input type="password" name="password" minlength="8" required autocomplete="new-password"></label>
+      <button class="btn full" type="submit">CREAR MI ENTRADA ↗</button>
+    </form>
+    <div id="auth-status" class="status" aria-live="polite"></div>
+  </div>
+</div>
+
+<div id="lab-modal" class="modal" aria-hidden="true">
+  <div class="modal-backdrop" data-close-lab></div>
+  <div class="lab-console" role="dialog" aria-modal="true" aria-labelledby="tronic-title">
+    <div class="console-header"><div><span class="status-dot"></span><b>ECO.TRONIC</b><small>La inteligencia detrás del laboratorio.</small></div><button class="modal-close" data-close-lab>×</button></div>
+    <div class="step-line"><span class="active">01 IDEA</span><span>02 ESTILO</span><span>03 DATOS</span><span>04 COMANDA</span></div>
+    <div id="lab-step-1" class="lab-step active-step">
+      <p class="eyebrow green">COMENCEMOS POR LA IDEA</p><h2 id="tronic-title">¿Qué quieres <em>crear?</em></h2>
+      <p class="step-copy">No necesitas saber cómo hacerlo. Cuéntame qué quieres transformar, fabricar, diseñar o imaginar.</p>
+      <label>Tu idea<textarea id="idea" rows="5" placeholder="Ej. Quiero crear un mural para una cafetería..." required></textarea></label>
+      <div class="quick-types"><button type="button" data-type="Mural">MURAL</button><button type="button" data-type="Letrero">LETRERO</button><button type="button" data-type="Mobiliario">MOBILIARIO</button><button type="button" data-type="Espacio">ESPACIO</button><button type="button" data-type="Objeto">OBJETO</button><button type="button" data-type="Experiencia">EXPERIENCIA</button></div>
+      <input id="project-type" type="hidden">
+      <button class="btn full next-step" data-next="2">CONTINUAR →</button>
+    </div>
+    <div id="lab-step-2" class="lab-step">
+      <p class="eyebrow green">ECO.TRONIC QUIERE ENTENDER TU ESTILO</p><h2>Elige hasta <em>3 estilos.</em></h2>
+      <p class="step-copy">Puedes combinar estilos. ECO.TRONIC los interpretará como una dirección creativa, no como una plantilla.</p>
+      <div id="style-options" class="style-options"><div class="loading">Cargando estilos del laboratorio…</div></div>
+      <button class="btn full next-step" data-next="3">CONTINUAR →</button>
+    </div>
+    <div id="lab-step-3" class="lab-step">
+      <p class="eyebrow green">DATOS DEL PROYECTO</p><h2>Ahora hagámoslo <em>concreto.</em></h2>
+      <div class="form-grid two">
+        <label>Ubicación<input id="project-location" type="text" placeholder="Ciudad, país"></label>
+        <label>Fecha deseada<input id="project-date" type="date"></label>
+      </div>
+      <div class="form-grid two">
+        <label>Medidas<input id="project-measures" type="text" placeholder="Ej. 8 m × 3 m"></label>
+        <label>Presupuesto aproximado<input id="project-budget" type="number" min="0" step="1000" placeholder="COP"></label>
+      </div>
+      <div class="form-grid two">
+        <label>Complejidad<select id="project-complexity"><option value="Por definir">Por definir</option><option>Baja</option><option>Media</option><option>Alta</option></select></label>
+        <label>Tiempo requerido<input id="project-time" type="text" placeholder="Ej. 30 días / por definir"></label>
+      </div>
+      <label>Observaciones<textarea id="project-notes" rows="3" placeholder="Referencias, restricciones o algo que debamos saber…"></textarea></label>
+      <button class="btn full next-step" data-next="4">CREAR COMANDA →</button>
+    </div>
+    <div id="lab-step-4" class="lab-step result-step">
+      <div class="success-orbit"><span>eco<span>.</span></span></div>
+      <p class="eyebrow green">COMANDA RECIBIDA</p><h2>Tu idea ya está <em>dentro.</em></h2>
+      <p id="comanda-result" class="step-copy"></p>
+      <div class="comanda-box"><span>CÓDIGO</span><strong id="comanda-code">ECO-000</strong><small id="comanda-progress">0% completado · En análisis</small></div>
+      <button class="btn full" data-close-lab>VOLVER AL LABORATORIO ↗</button>
+    </div>
+    <div id="lab-status" class="status" aria-live="polite"></div>
+    <div class="session-bar"><span id="session-user"></span><button id="logout-btn" type="button">Cerrar sesión</button></div>
+  </div>
+</div>
+</body>
+</html>
